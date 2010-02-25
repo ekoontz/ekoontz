@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Eugene Koontz, Software Engineer</title>
+<!-- $id: resume.html,v 1.2 2002/10/16 04:04:08 ekoontz exp $ -->
+<style type="text/css" media="screen">
+      body {
+      font-family: sans-serif;
+      line-height: 1.5em;
+      }
+      
+      .contactinfo {
+      font-family: sans-serif;
+      line-height: 1.0em;
+      margin-bottom: 1.0em;
+      }
+
+      #key {
+      display:none;
+      background:#eeeeee;
+      border-right:2px solid #00FFFF;
+      border-bottom:2px solid #00FFFF;
+      float:left;
+      position:fixed;
+      width:10em;
+      left:0;
+      top:0;
+      padding-top:0.5em;
+      padding-left:0.5em;
+      padding-bottom:0.5em;
+      }
+      
+      #key ul {
+      list-style-type: none;
+      padding:0;
+      }
+
+      #key li {
+      padding-left:0.25em;
+      }
+
+
+      #maincontent {
+      float:right;
+      width:95%;
+      border: 0px solid black;
+      margin-bottom: 12px;
+      padding: 4px;
+      }
+
+      .head {
+      font-size:x-large;
+      }
+
+      .header {
+      font-size:large;
+      }
+
+      .section {
+      margin:1em;
+      padding:1em;
+      }
+      
+      .summary {
+      margin-left:20px;
+      }
+      
+      .subsection {
+      margin-left: 20px;      
+      }
+
+      .focused_section {
+      border:2px solid #eeeeee;
+      }
+
+      .focused {
+
+      background: white;
+      }
+
+      .normal {
+      background: #eeeeee;
+      }
+
+      .maincontent {
+      background:white;
+      }
+
+
+    </style>
+<script  type="text/javascript">
+  var current = "maincontent"
+  function hide_contents() {
+    document.getElementById('key').style.display='none';
+    document.getElementById('maincontent').style.width='100%';
+  }
+
+  function sectionfocus(id) {
+
+    if (id == "maincontent") {
+      document.location = "resume.html";
+      return;
+    }
+    
+    var maincontent = document.getElementById("maincontent");
+
+    if (current != id) {
+      var node = document.getElementById(current);
+      node = document.getElementById(current+"_key");
+      node.setAttribute("class","normal");
+    }
+
+    current = id;
+    var node = document.getElementById(id);
+
+    node = document.getElementById(current+"_key");
+    node.setAttribute("class","focused");
+
+    document.location='#'+id;
+  }
+
+</script>
+  </head>
+  <body>
+    <div id="key">Contents<div style="width:95%;font-size:small;text-align:right"><a onclick="hide_contents()">[hide]</a></div>
+      <ul style="background:#eeeeee;">
+	<li id="maincontent_key" class="focused" onclick="sectionfocus('maincontent')">Contact</li>
+	<li id="summary_key" onclick="sectionfocus('summary')">Summary</li>
+	<li id="background_key" onclick="sectionfocus('background')">Background</li>
+	<li id="software_key" onclick="sectionfocus('software')">Software</li>
+	<li id="experience_key" onclick="sectionfocus('experience')">Experience</li>
+	<li id="education_key" onclick="sectionfocus('education')">Education</li>
+	<li id="publications_key" onclick="sectionfocus('publications')">Publications &amp; Presentations</li>
+      </ul>
+    </div>
+    <div id="maincontent">
+      <table class="head" width="100%">
+        <tr>
+          <td align="left">Eugene Koontz</td>
+          <td align="right">Software Engineer</td>
+        </tr>
+      </table>
+      <table class="contactinfo" width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <td>
+			10 Cyril Magnin #708
+		</td>
+          <td align="right">
+			(650) 861-9777 (mobile)
+		</td>
+        </tr>
+        <tr>
+          <td>
+			San Francisco, CA 94110
+		</td>
+          <td align="right">
+			(415) 829-7686 (home)
+		</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="mailto:ekoontz@hiro-tan.org">ekoontz@hiro-tan.org</a> <span style="font-size:smaller;display:none"><a href="gpg.txt">GPG key</a></span>
+          </td>
+        </tr>
+      </table>
+      <div id="summary" class="section"><div class="header">Summary</div>Software Engineer in the San Francisco Bay area since 1998, specializing in : 
+        <ul>
+          <li>Data-intensive programming using both database APIs and custom data structures</li>
+          <li>Network software development, for both client and server and low-level (sockets) and high-level (HTTP/XML/HTML)</li>
+          <li>Optimizing and refactoring existing source code</li>
+          <li>Open source/free software as a software development platform</li> 
+          <li>Statistical software development</li>
+        </ul>
+     </div>
+      <div id="background" class="section"><div class="header">Programming Background</div><p></p>Eight (8) years working experience developing with C/C++ (including
+standard template library), perl, python, Ruby on Rails, Java, tcp/ip and Unix socket
+programming and xml parsing/generation. Experienced in design,
+debugging, testing and maintenance in unix (Solaris, Linux) and Microsoft Windows
+environments. Experience with cgi-bin, PHP web scripting, SQL (MySQL,
+PostgreSQL), LDAP (openldap on unix). Command of CVS and
+Perforce source control tools; nightly build tools (shell scripts,
+Perl and make); knowledge of Purify and profiling tools. Proficient
+with yacc, lex, java, xml,xslt,xslt:fo (Apache FOP), Common Lisp and
+common lisp object system (CLOS). Familiar with internationalization
+(i18n) programming (Unicode, IBM's ICU library). Familiar with
+Matlab. 
+</div>
+      <div class="section" id="software">
+        <div class="header">
+          <a href="free_software.html">
+	  Free/Open Source Software</a>
+        </div>
+        <ul>
+<li>
+<a href="http://wiki.github.com/ekoontz/yahoo-bart-widget">BART (Bay Area Rapid Transit) Trip Planner for Yahoo! Widgets</a>
+</li>
+          <li>
+            <a href="http://github.com/ekoontz/jverb">Jverb: a Japanese verb conjugation learning application</a> (using Ruby on Rails)</a>
+          </li>
+          <li>
+            <a href="ipcop_and_dg.html">Enhancements to IPCop</a>
+          </li>
+          <li>
+            <a href="http://edg.sf.net">Example-based Development of Grammars</a>
+          </li>
+          <li>
+            <a href="http://bugs.gentoo.org/show_bug.cgi?id=34957">Gentoo Port of WordNet</a>
+          </li>
+          <li>
+            <a href="bug11013/index.html">Work on mozilla.org, bug 11013</a>
+          </li>
+          <li><a href="twig-spam-patch.html">Bayesian Spam Filter</a> for <a href="http://twig.screwdriver.net/">TWIG</a></li>
+          <li><a href="psqlog/doc/psqlog.html">Prolog implemented in PostgreSQL</a></li>
+
+        </ul>
+      </div>
+      <div class="section" id="experience">
+        <div class="header">Work Experience</div>
+        <table width="100%" border="0" cellpadding="2" cellspacing="20">
+          <tr valign="top">
+            <td>
+              <h3>
+                <a href="http://permitsoft.com">PermitSoft</a>
+              </h3>
+              <p><br />June 2005--present <br />Palo Alto CA</p>
+            </td>
+            <td>
+              <p>Software Engineer working on XML/HTTP web application environment for Municipalities Workflow Processes, using AJAX/(Javascript/DHTML) on client side and PHP, XSLT, Java, and PostgreSQL on server-side. Developed GIS (Geographical Information Systems) component and Search component and developed Ajax framework and XHTML cross-application library/widget set.</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <h3>
+                <a href="http://mailfrontier.com">MailFrontier</a>
+              </h3>
+              <p><br />February 2004-June 2005 <br />Palo Alto CA 
+			</p>
+            </td>
+            <td>
+              <p>Senior Software Engineer working on email
+		security (anti-spam and anti-fraud)
+		software. Developed web-based diagnostic tools for
+		effectiveness evaluation. Developed statistical
+		phishing fraud mail classifier. Extended
+		existing codebase to improve effectiveness against
+		evolving mail security threats.</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <h3>Sony speech recognition group</h3>
+              <p><br />January 2003-February 2004<br />San Jose CA 
+			</p>
+            </td>
+            <td>
+              <p>Designed and implemented multithreaded networked client for
+			speech recognizer written in C++. Wrote network tcp connection
+			proxy in Perl using custom modules. Wrote network clients in Perl
+			and Tcl to interface with speech recognition server. Designed
+			interactive database system for speech pronunciation data in
+			python. Ported speech recognition system from solaris to linux. 
+			</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <h3>
+                <a href="http://plan-review.com">Plan Review Consultants</a>
+              </h3>
+              <p><br />January 2002-December 2002 <br />Berkeley CA 
+			</p>
+            </td>
+            <td>
+              <p>Developed web application for use by local governments in
+			construction permit review process. Implemented with apache as
+			application server base, PostgreSQL for persistent data
+			storage, and PHP for user interface and session management.
+			Implemented xsl:fo stylesheets for invoice and contract pdf
+			document creation from xml source using Java FOP.
+			</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <h3>YY Software</h3>
+              <p><br />July
+			2000-December 2001 <br />Mountain View CA 
+			</p>
+            </td>
+            <td>
+              <p>Developer for large, complex enterprise-level (~800k
+			lines source code) customer relations management software system.
+			developed custom xml query/command language and custom xml
+			parser/generator using lex and yacc with object-oriented interface
+			to existing database. Developed tcp/ip socket code as transport
+			for xml procedure calls. Developed web front end to system using
+			xsl as an xml-to-html translator, using apache, mod-perl and the
+			sablotron xsl processor. Web front end was i18n-aware and could
+			handle both English and Japanese as Unicode. 
+			</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <h3>Sony Spoken Language Translation Group</h3>
+              <p><a href="http://www.sel.sony.com/">www.sel.sony.com</a><br />July
+			1998- July 2000 <br />San Jose CA 
+			</p>
+            </td>
+            <td>
+              <p>Designed and optimized algorithms for use in english/japanese
+			bidirectional speech to speech translation system, resulting in
+			significant time and space savings. Optimizations included the
+			development of a general purpose memory management library for
+			run-time system, and a compression method for on-line storage of
+			linguistic data. Developed a fast query resolver for the predicate
+			language that controls the transfer from source language to target
+			language. <a href="fastmatch.pdf">Submission to NAACL 2000 Workshop on Embedded Machine Translation Systems</a> based on this work available. Work resulted in three US patent submissions.
+			participated in demo of complete bidirectional translation system
+			at sony headquarters in Tokyo. Coordinated project infrastructure
+			: implemented source code version control (CVS), bug tracking
+			(bugzilla) and nightly build process. Developed custom perl
+			cgi-bin web interfaces to cvs source repository and build status. 
+			</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <h3>Center for Excellence in Document Analysis and Recognition
+			(cedar)</h3>
+              <p><a href="http://www.cedar.buffalo.edu">www.cedar.buffalo.edu</a><br />1995-1998 <br />Buffalo NY 
+			</p>
+            </td>
+            <td>
+              <p>Programmer for Show and Tell, a project
+			integrating natural language understanding and
+			image recognition. designed and implemented
+			speech recognition interface and natural
+			language understanding components of
+			project. Integrated work with other project
+			members and later took over all aspects of
+			implementation in C, Perl and Lisp.
+			</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="section" id="education">
+        <div class="header">Education</div>
+        <ul>
+          <li>
+            <p style="margin-bottom: 0in">MS in Computer Science, SUNY
+	Buffalo, Buffalo, NY. 1998. Thesis on Natural Language Understanding. 
+	</p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">Coursework completed for MA
+	in Linguistics, Suny Buffalo. 
+	</p>
+          </li>
+          <li>
+            <p>St. John's College Annapolis, MD. B.A. in Liberal Arts,
+	concentration in history of mathematics and philosophy, 1993.
+	</p>
+          </li>
+        </ul>
+      </div>
+      <div class="section" id="publications">
+        <div class="header">Publications and Conference Presentations</div>
+        <ul>
+          <li>
+            <p><a href="http://spamconference.org/abstracts.html#Koontz"><i>Bayesian Spam Classification Applied to Phishing Fraud</i></a> (with  Jonathan Oliver and Andrew Klein), MIT Spam Conference, 2005</p>
+          </li>
+          <li>
+            <p><a href="http://www.ceas.cc/papers-2004/114.pdf"><i>Anatomy of a Phishing Email</i></a> (with  Christine Drake and Jonathan Oliver), Proceedings of the First Conference on Email and Anti-Spam (CEAS), 2004</p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">"XML in a web-based grammar
+	development environment", August 2002, <a href="http://www.ling.helsinki.fi/~gwilcock/nlpxml/program.html">2nd
+	Workshop on NLP and XML (NLPXML-2002)</a> </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">(with Hyopil Shin) "a
+	language for querying and editing xml documents, applied to a
+	linguistic knowledge base", IEEE International Workshop On
+	Natural Language Processing and Knowledge Engineering (nlpke 2001).
+	<a href="nlpke-hpshin.sxw">star/openoffice format</a> ; <a href="nlpke-hpshin.doc">msword
+	format</a> </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">(with Alexander Franz, Keiko
+	Horiguchi, Lei Duan, Doris Ecker, and Kazami Uchida) "An
+	integrated architecture for example-based machine translation",
+	COLING, August 2000, Saarbruken. Programme available at
+	<a href="http://let.dfki.uni-sb.de/coling2000/programme.html">http://let.dfki.uni-sb.de/coling2000/programme.html</a></p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">"<a href="fastmatch.pdf">Efficient Runtime Example Matching in a Translation System</a>",
+	Submitted to Workshop on Embedded Machine Translation Systems, NAACL, February 2000.</p>
+          </li>
+          <li>
+            <p>"Learning probabilistic attribute value grammars by
+	model merging", HPSG conference, held during LSA Summer
+	Institute at Cornell University, 1997. <a href="abstract.pdf">abstract
+	available here in pdf</a> </p>
+          </li>
+          <li>
+            <p>"Incorporating Diverse Information Sources in
+	Handwriting Recognition Post Processing" (with D. Bouchaffra,
+	V. Kripasundar, and R. Srihari). appeared in International Journal
+	of Imaging Systems and Technology (IJIST), special issue, published
+	by John Wiley, June 1996. </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+<!-- /#maincontent -->
+  </body>
+</html>
