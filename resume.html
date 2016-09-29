@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Eugene Koontz, Software Engineer</title>
-<!-- $id: resume.html,v 1.2 2002/10/16 04:04:08 ekoontz exp $ -->
-<style type="text/css" media="screen">
+    <meta Content-Type="text/html; charset=UTF-8">
+    <title>Eugene Koontz, Programmer</title>
+    <style type="text/css" media="screen">
       body {
       font-family: sans-serif;
       line-height: 1.5em;
@@ -87,149 +85,88 @@
       .maincontent {
       background:white;
       }
-
-
     </style>
-<script  type="text/javascript">
-  var current = "maincontent"
-  function hide_contents() {
-    document.getElementById('key').style.display='none';
-    document.getElementById('maincontent').style.width='100%';
-  }
-
-  function sectionfocus(id) {
-
-    if (id == "maincontent") {
-      document.location = "resume.html";
-      return;
-    }
-    
-    var maincontent = document.getElementById("maincontent");
-
-    if (current != id) {
-      var node = document.getElementById(current);
-      node = document.getElementById(current+"_key");
-      node.setAttribute("class","normal");
-    }
-
-    current = id;
-    var node = document.getElementById(id);
-
-    node = document.getElementById(current+"_key");
-    node.setAttribute("class","focused");
-
-    document.location='#'+id;
-  }
-
-</script>
   </head>
   <body>
-    <div id="key">Contents<div style="width:95%;font-size:small;text-align:right"><a onclick="hide_contents()">[hide]</a></div>
-      <ul style="background:#eeeeee;">
-	<li id="maincontent_key" class="focused" onclick="sectionfocus('maincontent')">Contact</li>
-	<li id="summary_key" onclick="sectionfocus('summary')">Summary</li>
-	<li id="background_key" onclick="sectionfocus('background')">Background</li>
-	<li id="software_key" onclick="sectionfocus('software')">Software</li>
-	<li id="experience_key" onclick="sectionfocus('experience')">Experience</li>
-	<li id="education_key" onclick="sectionfocus('education')">Education</li>
-	<li id="publications_key" onclick="sectionfocus('publications')">Publications &amp; Presentations</li>
-      </ul>
-    </div>
     <div id="maincontent">
       <table class="head" width="100%">
         <tr>
-          <td align="left">Eugene Koontz</td>
-          <td align="right">Software Engineer</td>
+          <td align="left" rowspan="2">Eugene Koontz</td>
+	</tr>
+	<tr>
+          <td align="right"><a href="mailto:ekoontz@hiro-tan.org">ekoontz@hiro-tan.org</a></td>
+	</tr>
+        <tr>
+          <td>
+	  </td>
+          <td align="right">
+	    <a href="http://github.com/ekoontz">http://github.com/ekoontz</a>
+	  </td>
+        </tr>
+	<tr>
+          <td>
+	    Oakland, CA
+	  </td>
+          <td align="right">
+	    (650) 861-9777
+	  </td>
+	</tr>
+
+        <tr>
+          <td colspan="2" style="text-align:right">
+	    <a href="http://ekoontz.github.io">http://ekoontz.github.io</a>
+	  </td>
         </tr>
       </table>
-      <table class="contactinfo" width="100%" cellpadding="2" cellspacing="2">
-        <tr>
-          <td>
-			10 Cyril Magnin #708
-		</td>
-          <td align="right">
-			(650) 861-9777 (mobile)
-		</td>
-        </tr>
-        <tr>
-          <td>
-			San Francisco, CA 94110
-		</td>
-          <td align="right">
-			(415) 829-7686 (home)
-		</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="mailto:ekoontz@hiro-tan.org">ekoontz@hiro-tan.org</a> <spa
-          </td>
-        </tr>
-      </table>
-      <div id="summary" class="section"><div class="header">Summary</div>Software Engineer in the San Francisco Bay area since 1998, specializing in : 
-        <ul>
-          <li>Data-intensive programming using both database APIs and custom data structures</li>
-          <li>Network software development, for both client and server and low-level (sockets) and high-level (HTTP/XML/HTML)</li>
-          <li>Optimizing and refactoring existing source code</li>
-          <li>Open source/free software as a software development platform</li> 
-          <li>Statistical software development</li>
-        </ul>
+      <div id="summary"
+	class="section"><div class="header">Summary</div> <p>Programmer
+	with experience enhancing and debugging Hadoop and
+	related software and interacting with the Apache community.
+	Apache Giraph committer and past PMC member.</p>
      </div>
-      <div id="background" class="section">
-	<div class="header">Programming Background</div>
-	<p></p>Twelve years working experience developing with C/C++
-	(including standard template library), perl, python, Ruby on
-	Rails, Java, TCP/IP and Unix socket programming and xml
-	parsing/generation. Experienced in design, debugging, testing
-	and maintenance in unix (Solaris, Linux) and Microsoft Windows
-	environments. Experience with cgi-bin, PHP web scripting, SQL
-	(MySQL, PostgreSQL). Command of popular version control
-	systems (git, SVN, CVS, Perforce).  Build tools (Capistrano,
-	shell scripts, Perl and make); knowledge of Purify and
-	profiling tools. Proficient with yacc, lex, java,
-	xml,xslt,xslt:fo (Apache FOP), Common Lisp and common lisp
-	object system (CLOS). Familiar with internationalization
-	(i18n) programming (Unicode, IBM's ICU library).
-      </div>
-      <div class="section" id="software">
-        <div class="header">
-          <a href="free_software.html">
-	  Free/Open Source Software</a>
-        </div>
-        <ul>
-	  <a href="http://wiki.github.com/ekoontz/yahoo-bart-widget">BART (Bay Area Rapid Transit) Trip Planner for Yahoo! Widgets</a>
-	</li>
-	<li>
-	  <a href="http://wiki.github.com/ekoontz/chordbrowser">Chordbrowser</a>
-	</li>
-        <li>
-          <a href="http://github.com/ekoontz/jverb">Jverb: a Japanese verb conjugation learning application</a> (using Ruby on Rails)</a>
-      </li>
-      <li>
-        <a href="ipcop_and_dg.html">Enhancements to IPCop</a>
-      </li>
-      <li>
-        <a href="http://edg.sf.net">Example-based Development of Grammars</a>
-      </li>
-      <li>
-        <a href="http://bugs.gentoo.org/show_bug.cgi?id=34957">Gentoo Port of WordNet</a>
-      </li>
-      <li>
-        <a href="bug11013/index.html">Work on mozilla.org, bug 11013</a>
-      </li>
-      <li><a href="twig-spam-patch.html">Bayesian Spam Filter</a> for <a href="http://twig.screwdriver.net/">TWIG</a></li>
-      <li><a href="psqlog/doc/psqlog.html">Prolog implemented in PostgreSQL</a></li>
-      
-    </ul>
-  </div>
   <div class="section" id="experience">
     <div class="header">Work Experience</div>
     <table width="100%" border="0" cellpadding="2" cellspacing="20">
       <tr valign="top">
         <td>
           <h3>
+            <a href="http://apple.com">Apple</a>
+          </h3>
+          <p><br />June 2013-April 2016 <br />Cupertino CA</p>
+        </td>
+        <td>
+	  <p>Siri Hadoop Operations Engineer</p>
+      </tr>
+      <tr valign="top">
+        <td>
+          <h3>
+            <a href="http://trendmicro.com">TrendMicro</a>
+          </h3>
+          <p><br />March 2010-May 2013 <br />Cupertino CA</p>
+        </td>
+        <td>
+	  <p>
+	    Led Hadoop Group of 4 members, developed and
+	    maintained internal Hadoop distribution. Developed
+	    automated methods for upgrading and testing Hadoop
+	    clusters.
+	  </p>
+	  <ul>
+	    <li>Led effort to upgrade internal Hadoop distribution from planning to deployment.</li>
+	    <li>Helped curate Apache source code for internal distribution.</li>
+	    <li>Security Enhancements to Apache Zookeeper: <a href="https://issues.apache.org/jira/browse/ZOOKEEPER-938">ZOOKEEPER-938</a></li>
+	    <li>Improvements to Apache Giraph: <a href="https://issues.apache.org/jira/browse/GIRAPH-168">GIRAPH-168</a>, <a href="https://issues.apache.org/jira/browse/GIRAPH-211">GIRAPH-211</a></li>
+	    <li>Integration of Zookeeper Security enhancements with Apache HBase <a href="https://issues.apache.org/jira/browse/HBASE-2418">HBASE-2418</a></li>
+	    <li>Numerous minor improvements to Apache Hadoop, Apache Pig, Apache HBase, hadoop-lzo.</li>
+	  </ul>
+	</td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <h3>
             <a href="http://permitsoft.com">PermitSoft</a>
           </h3>
-          <p><br />June 2005--present <br />Palo Alto CA</p>
+          <p><br />June 2005-March 2010 <br />Palo Alto CA</p>
         </td>
         <td>
           <p>Software Engineer working on XML/HTTP web application environment for Municipalities Workflow Processes, using AJAX/(Javascript/DHTML) on client side and PHP, XSLT, Java, and PostgreSQL on server-side. Developed GIS (Geographical Information Systems) component and Search component and developed Ajax framework and XHTML cross-application library/widget set.</p>
@@ -376,6 +313,8 @@
   <div class="section" id="publications">
     <div class="header">Publications and Conference Presentations</div>
     <ul>
+      <li>
+	<p><a href="http://www.meetup.com/hbaseusergroup/events/14606174/">HBase Security</a> (with Gary Helmling), HBase Meetup in New York City, 2010</p>
       <li>
         <p><a href="http://spamconference.org/abstracts.html#Koontz"><i>Bayesian Spam Classification Applied to Phishing Fraud</i></a> (with  Jonathan Oliver and Andrew Klein), MIT Spam Conference, 2005</p>
       </li>
